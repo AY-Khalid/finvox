@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+backend/.env
+backend/finvox.db
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+.write_test
+nul
