@@ -83,6 +83,7 @@ a { color: inherit; }
   margin-top: 14px; font-size: 0.88rem; color: var(--ink-soft);
   display: flex; align-items: center; gap: 7px;
 }
+.hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* phone mock */
 .phone {
@@ -320,15 +321,100 @@ footer {
 
 /* ================= Responsive ================= */
 @media (max-width: 860px) {
-  .hero { grid-template-columns: 1fr; padding: 36px 0 56px; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 28px 0 48px;
+    gap: 32px;
+  }
   .phone { margin: 0 auto; }
 }
+
+/* ----- Tablet / large phone (≤ 620px) ----- */
 @media (max-width: 620px) {
+  .container { padding: 0 18px; }
+
+  /* Nav */
+  .nav { padding: 14px 0; }
+  .logo { font-size: 1.2rem; }
+  .logo .logo-mark { width: 26px; height: 26px; border-radius: 8px; }
+  .nav-cta { padding: 8px 14px; font-size: 0.82rem; }
+
+  /* Hero text */
+  .hero { padding: 12px 0 36px; gap: 24px; }
+  .hero h1 {
+    font-size: clamp(1.85rem, 8.4vw, 2.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+  }
+  .hero .sub {
+    margin: 14px 0 22px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .hero-note { margin-top: 12px; font-size: 0.82rem; }
+
+  /* Buttons full-width on phones */
+  .btn {
+    padding: 13px 22px;
+    font-size: 0.96rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .btn.ghost { width: 100%; }
+
+  /* Phone mockup smaller so it doesn't dominate */
+  .phone {
+    max-width: 290px;
+    padding: 10px;
+    border-radius: 28px;
+  }
+  .phone-screen { border-radius: 20px; }
+  .phone-top { padding: 10px 14px; font-size: 0.85rem; }
+  .phone-top .avatar { width: 24px; height: 24px; font-size: 0.72rem; }
+  .phone-body { padding: 12px 10px 14px; gap: 7px; }
+  .msg { font-size: 0.78rem; padding: 8px 11px; max-width: 92%; }
+
+  /* Sections breathe less */
+  section.block { padding: 52px 0; }
+  .block-head { margin-bottom: 28px; }
+  .block-head h2 { font-size: 1.65rem; }
+
+  .grid { gap: 14px; }
+  .feature { padding: 20px 18px; }
+  .feature .ficon { width: 38px; height: 38px; margin-bottom: 12px; }
+  .feature h3 { font-size: 1rem; }
+  .feature p { font-size: 0.9rem; }
+
+  .steps { gap: 14px; }
+  .step-card { padding: 20px 18px; }
+  .step-card::before { font-size: 1.7rem; margin-bottom: 4px; }
+
+  .trust { padding: 22px 20px; gap: 12px; }
+  .trust h3 { font-size: 1rem; }
+  .trust p { font-size: 0.88rem; }
+
+  .final-cta { padding: 56px 0 64px; }
+  .final-cta h2 { font-size: 1.65rem; }
+  .final-cta p { margin-bottom: 22px; }
+
+  footer { padding: 28px 0; font-size: 0.82rem; }
+  footer .container { gap: 6px; }
+
+  /* Ledger table (existing) */
   .stmt thead { display: none; }
   .stmt tr { display: block; padding: 10px 4px; border-bottom: 1px solid var(--line); }
   .stmt td { display: flex; justify-content: space-between; align-items: center; gap: 12px; border: none; padding: 3px 10px; }
   .stmt td::before { content: attr(data-l); color: var(--ink-soft); font-size: 0.74rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
   .tstamp .t { display: inline; margin-left: 6px; }
+}
+
+/* ----- Very narrow phones (≤ 380px) ----- */
+@media (max-width: 380px) {
+  .container { padding: 0 14px; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero .sub { font-size: 0.95rem; }
+  .nav-cta { padding: 7px 12px; font-size: 0.78rem; }
+  .phone { max-width: 260px; }
 }
 
 /* ================= Print (Export PDF) ================= */

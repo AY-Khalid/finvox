@@ -63,7 +63,7 @@ export default function Home() {
               business that banks can take seriously.
             </p>
             {dashLink ? (
-              <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              <div className="hero-cta">
                 <a className="btn" href={dashLink}>
                   <LayoutDashboard size={18} />
                   Open my dashboard
